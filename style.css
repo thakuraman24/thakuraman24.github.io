@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family:sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.top{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#logo{
+    display: inline-block;
+    max-width: 150px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.navbar {
+ 
+    position: fixed; /* Or absolute, depending on your layout */
+    top: 160px;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px; /* Adjust padding as needed */
+    background-color: rgba(255, 255, 255, 0.3); /* White with 20% opacity */
+
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Optional light border */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+    z-index: 100; /* Ensure it stays on top of other content */
+  }
+  
+  /* Style your navigation links and other elements within the navbar */
+  .navbar a {
+    font-weight: bold;
+    font-size: 20px;
+    color: black; /* Adjust text color */
+    text-decoration: none;
+    margin-right: 100px;
+  }
+
+.container{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    column-gap: 20px;
+    row-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    grid-template-rows: repeat(3, 250px);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    
+}
+
+div img:not(#logo){
+    width:100%;
+    border-radius: 20px;
+    border: 1px solid black ;
+    /* max-width: 300px ; */
+}
+
+div.container a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    background-color: black; /* Dark background color */
+    color: #f2f2f2; /* Light text color */
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 1200px; /* Optional: Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: flex-start; /* Align items to the top of each column */
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    width: 100%; /* Full width by default for smaller screens */
+}
+
+/* For medium and larger screens, create columns */
+@media (min-width: 768px) {
+    .footer-section {
+        width: calc(33.33% - 20px); /* Adjust width and margin as needed for columns */
+    }
+}
+
+.footer-section h4 {
+    margin-top: 0;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ccc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+    font-size: 0.8em;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
